@@ -2,7 +2,7 @@ import React from "react";
 import { Layout } from "antd";
 import "./App.css";
 import Sertf from "./img/Система-качества.jpg";
-import Protokol from "./img/photo_2025-01-12_22-15-32.jpg";
+import Protokol from "./img/merkuron-protokol.jpg";
 
 const { Content } = Layout;
 
@@ -35,8 +35,6 @@ function App() {
           }}
         >
           {/* Sertifikat rasmini joylash */}
-          <div className="image-frame">
-          <a href='https://postimg.cc/B8LszS1Y' target='_blank'><img src='https://i.postimg.cc/B8LszS1Y/merkuronpoysk-img.jpg' border='0' alt='merkuronpoysk-img'/></a>          </div>
           
           <div className="image-frame">
             <a

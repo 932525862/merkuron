@@ -33,7 +33,7 @@ function App() {
   }, []);
 
   return (
-    <Layout style={{ minHeight: "200vh", backgroundColor: "#f0f2f5" }}>
+    <Layout style={{ minHeight: "250vh", backgroundColor: "#f0f2f5" }}>
       <Content
         style={{
           display: "flex",

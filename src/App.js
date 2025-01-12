@@ -67,7 +67,7 @@ function App() {
           <div className="image-frame">
             <a
               href="#"
-              onClick={() => redirectToSite("https://merkuron.vercel.app")}
+              onClick={() => redirectToSite("https://merkuron-jphg.vercel.app/")}
             >
               <img
                 ref={(el) => (imgRefs.current[0] = el)}
@@ -90,7 +90,7 @@ function App() {
           <div className="image-frame">
             <a
               href="#"
-              onClick={() => redirectToSite("https://merkuron.vercel.app")}
+              onClick={() => redirectToSite("https://merkuron-jphg.vercel.app/")}
             >
               <img
                 ref={(el) => (imgRefs.current[1] = el)}
@@ -105,7 +105,7 @@ function App() {
               />
             </a>
             <p style={{ textAlign: "center", marginTop: "10px" }}>
-              Система - Качества - Федеральная
+              Система-Качества-Федеральная
             </p>
           </div>
         </div>

@@ -1,41 +1,12 @@
-import React, { useEffect, useRef } from "react";
+import React from "react";
 import { Layout } from "antd";
 import "./App.css";
-import Sertf from "./img / Система - качества.jpg";
+import Sertf from "./img / Система-качества.jpg";
 import Protokol from "./img /merkuron-protokol.jpg";
 
 const { Content } = Layout;
 
 function App() {
-  const imgRefs = useRef([]); // img elementlari uchun `useRef`
-
-  useEffect(() => {
-    // O'ng tugma (context menu) ni bloklash
-    const handleContextMenu = (e) => e.preventDefault();
-
-    // Rasmni sudrab olib chiqishni bloklash
-    const handleDragStart = (e) => e.preventDefault();
-
-    document.addEventListener("contextmenu", handleContextMenu);
-
-    imgRefs.current.forEach((img) => {
-      if (img) {
-        img.addEventListener("dragstart", handleDragStart);
-      }
-    });
-
-    // Cleanup funksiyasi
-    return () => {
-      document.removeEventListener("contextmenu", handleContextMenu);
-
-      imgRefs.current.forEach((img) => {
-        if (img) {
-          img.removeEventListener("dragstart", handleDragStart);
-        }
-      });
-    };
-  }, []);
-
   const redirectToSite = (url) => {
     window.location.href = url;
   };
@@ -70,7 +41,6 @@ function App() {
               onClick={() => redirectToSite("https://merkuron-jphg.vercel.app/")}
             >
               <img
-                ref={(el) => (imgRefs.current[0] = el)}
                 src={Sertf}
                 alt="Система - Качества - Федеральная"
                 title="Система - Качества - Федеральная"
@@ -93,7 +63,6 @@ function App() {
               onClick={() => redirectToSite("https://merkuron-jphg.vercel.app/")}
             >
               <img
-                ref={(el) => (imgRefs.current[1] = el)}
                 src={Protokol}
                 alt="Система - Качества - Федеральная"
                 title="Система - Качества - Федеральная"

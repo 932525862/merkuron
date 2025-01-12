@@ -2,7 +2,7 @@ import React from "react";
 import { Layout } from "antd";
 import "./App.css";
 import Sertf from "./img/Система-качества.jpg";
-import Protokol from "./img/merkuron-protokol.jpg";
+import Protokol from "./img/photo_2025-01-12_22-15-32.jpg";
 
 const { Content } = Layout;
 

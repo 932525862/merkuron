@@ -1,7 +1,7 @@
 import React from "react";
 import { Layout } from "antd";
 import "./App.css";
-import Sertf from "./img/Система-качества.jpg";
+import Sertf from "./img/merkuron.jpg";
 // import Protokol from "./img/merkuron-protokol.jpg";
 
 const { Content } = Layout;

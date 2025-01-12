@@ -1,13 +1,13 @@
 import React, { useEffect, useRef } from "react";
 import { Layout } from "antd";
-import "./App.css"; // CSS faylini import qilamiz
-import Sertf from "./img /merkuron-sertifikar.jpg";
-import Protokol from "./img /merkuron-protokol.jpg"
+import "./App.css";
+import Sertf from "./img / Система - качества.jpg";
+import Protokol from "./img /merkuron-protokol.jpg";
 
 const { Content } = Layout;
 
 function App() {
-  const imgRef = useRef(null); // img elementiga murojaat qilish uchun `useRef`
+  const imgRefs = useRef([]); // img elementlari uchun `useRef`
 
   useEffect(() => {
     // O'ng tugma (context menu) ni bloklash
@@ -18,19 +18,32 @@ function App() {
 
     document.addEventListener("contextmenu", handleContextMenu);
 
-    if (imgRef.current) {
-      imgRef.current.addEventListener("dragstart", handleDragStart);
-    }
+    imgRefs.current.forEach((img) => {
+      if (img) {
+        img.addEventListener("dragstart", handleDragStart);
+      }
+    });
 
     // Cleanup funksiyasi
     return () => {
       document.removeEventListener("contextmenu", handleContextMenu);
 
-      if (imgRef.current) {
-        imgRef.current.removeEventListener("dragstart", handleDragStart);
-      }
+      imgRefs.current.forEach((img) => {
+        if (img) {
+          img.removeEventListener("dragstart", handleDragStart);
+        }
+      });
     };
   }, []);
+
+  const redirectToSite = (url) => {
+    window.location.href = url;
+  };
+
+  const openGoogleImageSearch = (imageSrc) => {
+    const googleSearchUrl = `https://www.google.com/searchbyimage?image_url=${encodeURIComponent(imageSrc)}`;
+    window.open(googleSearchUrl, "_blank");
+  };
 
   return (
     <Layout style={{ minHeight: "250vh", backgroundColor: "#f0f2f5" }}>
@@ -46,32 +59,54 @@ function App() {
           className="container"
           style={{
             display: "flex",
-            flexDirection: "column", // Elementlarni vertikal joylash
-            gap: "80px", // Elementlar orasidagi bo'shliq
+            flexDirection: "column",
+            gap: "80px",
           }}
         >
+          {/* Sertifikat rasmini joylash */}
           <div className="image-frame">
-            <img
-              ref={imgRef} // img elementini `ref` bilan bog'laymiz
-              src={Sertf}
-              alt="Merkuron"
-              className="image"
-              style={{
-                pointerEvents: "none", // CSS orqali rasmni tanlanmaslikni ta'minlash
-              }}
-            />
+            <a
+              href="#"
+              onClick={() => redirectToSite("https://merkuron.vercel.app")}
+            >
+              <img
+                ref={(el) => (imgRefs.current[0] = el)}
+                src={Sertf}
+                alt="Система - Качества - Федеральная"
+                title="Система - Качества - Федеральная"
+                className="image"
+                onClick={() => openGoogleImageSearch(Sertf)}
+                style={{
+                  cursor: "pointer",
+                }}
+              />
+            </a>
+            <p style={{ textAlign: "center", marginTop: "10px" }}>
+              Система - Качества - Федеральная
+            </p>
           </div>
 
+          {/* Protokol rasmini joylash */}
           <div className="image-frame">
-            <img
-              ref={imgRef} // img elementini `ref` bilan bog'laymiz
-              src={Protokol}
-              alt="Merkuron"
-              className="image"
-              style={{
-                pointerEvents: "none", // CSS orqali rasmni tanlanmaslikni ta'minlash
-              }}
-            />
+            <a
+              href="#"
+              onClick={() => redirectToSite("https://merkuron.vercel.app")}
+            >
+              <img
+                ref={(el) => (imgRefs.current[1] = el)}
+                src={Protokol}
+                alt="Система - Качества - Федеральная"
+                title="Система - Качества - Федеральная"
+                className="image"
+                onClick={() => openGoogleImageSearch(Protokol)}
+                style={{
+                  cursor: "pointer",
+                }}
+              />
+            </a>
+            <p style={{ textAlign: "center", marginTop: "10px" }}>
+              Система - Качества - Федеральная
+            </p>
           </div>
         </div>
       </Content>

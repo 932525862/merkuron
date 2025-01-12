@@ -17,7 +17,7 @@ function App() {
   };
 
   return (
-    <Layout style={{ minHeight: "240vh", backgroundColor: "#f0f2f5" }}>
+    <Layout style={{ minHeight: "150vh", backgroundColor: "#f0f2f5" }}>
       <Content
         style={{
           display: "flex",
@@ -35,7 +35,10 @@ function App() {
           }}
         >
           {/* Sertifikat rasmini joylash */}
-          
+          {/* <div className="image-frame">
+          <a href='https://postimg.cc/B8LszS1Y' target='_blank'><img src='https://i.postimg.cc/B8LszS1Y/merkuronpoysk-img.jpg' border='0' alt='merkuronpoysk-img'/></a>         
+         </div>
+           */}
           <div className="image-frame">
             <a
               href="https://www.merkuron.com/static/media/%20%D0%A1%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%B0-%D0%BA%D0%B0%D1%87%D0%B5%D1%81%D1%82%D0%B2%D0%B0.067e9dea591dd04939dc.jpg"

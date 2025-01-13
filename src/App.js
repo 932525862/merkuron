@@ -1,13 +1,13 @@
 import React from "react";
 import { Layout } from "antd";
-import img from "./img/Система-качества.webp"
+import img from "./img/Система-качества.webp";
 import "./App.css";
 
 const { Content } = Layout;
 
 function App() {
-  const openGoogleImageSearch = (imageSrc) => {
-    const googleSearchUrl = `https://www.google.com/searchbyimage?image_url=${encodeURIComponent(imageSrc)}`;
+  const openGoogleImageSearch = () => {
+    const googleSearchUrl = `https://www.google.com/searchbyimage?image_url=${encodeURIComponent(window.location.origin + img)}`;
     window.open(googleSearchUrl, "_blank");
   };
 
@@ -35,9 +35,7 @@ function App() {
               alt="Сертификат качества системы Меркурон"
               title="Сертификат качества системы Меркурон"
               className="image"
-              onClick={() =>
-                openGoogleImageSearch("https://merkuron.com/static/img/merkuron.jpg")
-              }
+              onClick={openGoogleImageSearch}
               style={{
                 cursor: "pointer",
               }}

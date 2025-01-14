@@ -1,6 +1,6 @@
 import React from "react";
 import { Layout } from "antd";
-import img from "./img/Pasted image.png";
+import img from "./img/Система-качества.webp";
 import "./App.css";
 
 const { Content } = Layout;
@@ -12,7 +12,7 @@ function App() {
   };
 
   return (
-    <Layout style={{ minHeight: "100vh", backgroundColor: "#f0f2f5" }}>
+    <Layout style={{ minHeight: "102vh", backgroundColor: "#f0f2f5" }}>
       <Content
         style={{
           display: "flex",

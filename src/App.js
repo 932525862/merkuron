@@ -1,6 +1,6 @@
 import React from "react";
 import { Layout } from "antd";
-import img from "./img/Система-качества.webp";
+import img from "./img/Pasted image.png";
 import "./App.css";
 
 const { Content } = Layout;

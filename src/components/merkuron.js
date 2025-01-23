@@ -1,18 +1,18 @@
 import React from "react";
 import { Layout } from "antd";
-import img from "../img/merkuron.webp";
+import img from "../img/merkuron-sertifikat.webp";
 import "../App.css";
 
 const { Content } = Layout;
 
 function Merkuron() {
   const openGoogleImageSearch = () => {
-    const googleSearchUrl = `https://www.google.com/searchbyimage?image_url=${encodeURIComponent(window.location.origin + img)}`;
+    const googleSearchUrl = `https://www.google.com/searchbyimage?image_url=${encodeURIComponent(window.location.origin + "/img/merkuron-sertifikat.webp")}`;
     window.open(googleSearchUrl, "_blank");
   };
 
   return (
-    <Layout style={{ minHeight: "102vh", backgroundColor: "#f0f2f5" }}>
+    <Layout style={{ minHeight: "100vh", backgroundColor: "#f0f2f5" }}>
       <Content
         style={{
           display: "flex",
@@ -26,7 +26,7 @@ function Merkuron() {
           style={{
             display: "flex",
             flexDirection: "column",
-            gap: "80px",
+            gap: "20px",
           }}
         >
           <div className="image-frame">
@@ -38,6 +38,8 @@ function Merkuron() {
               onClick={openGoogleImageSearch}
               style={{
                 cursor: "pointer",
+                maxWidth: "100%",
+                height: "auto",
               }}
             />
             <p style={{ textAlign: "center", marginTop: "10px" }}>
@@ -51,3 +53,4 @@ function Merkuron() {
 }
 
 export default Merkuron;
+

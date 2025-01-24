@@ -43,7 +43,7 @@ function Merkuron() {
               }}
             />
             <p style={{ textAlign: "center", marginTop: "10px" }}>
-              Сертификат качества системы Меркурон 45695
+              Сертификат качества системы Меркурон 
             </p>
           </div>
         </div>

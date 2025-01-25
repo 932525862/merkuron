@@ -32,8 +32,8 @@ function Merkuron() {
           <div className="image-frame">
             <img
               src={img}
-              alt="Сертификат качества системы Меркурон"
-              title="Сертификат качества системы Меркурон"
+              alt="Сертификат соответствия ГОСТ Р ИСО 9001-2015, Корпорация ИНТек"
+              title="Сертификат соответствия ГОСТ Р ИСО 9001-2015, Корпорация ИНТек"
               className="image"
               onClick={openGoogleImageSearch}
               style={{

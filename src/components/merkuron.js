@@ -1,6 +1,6 @@
 import React from "react";
 import { Layout } from "antd";
-import img from "../img/merkuron-sertifikat.webp";
+import img from "../img/merkuron.jpg";
 import "../App.css";
 
 const { Content } = Layout;

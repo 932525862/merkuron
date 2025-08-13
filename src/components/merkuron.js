@@ -29,7 +29,7 @@ function Merkuron() {
             gap: "20px",
           }}
         >
-          {/* <div className="image-frame">
+          <div className="image-frame">
             <img
               src={img}
               alt="Сертификат соответствия ГОСТ Р ИСО 9001-2015, Корпорация ИНТек"
@@ -45,7 +45,7 @@ function Merkuron() {
             <p style={{ textAlign: "center", marginTop: "10px" }}>
               Сертификат качества системы Меркурон 
             </p>
-          </div> */}
+          </div>
         </div>
       </Content>
     </Layout>
